@@ -7,7 +7,13 @@
 //
 
 import UIKit
+import ReSwift
+import ReSwiftThunk
 
+let mainStore = Store<MainState>(
+    reducer: mainReducer,
+    state: nil
+)
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

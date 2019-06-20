@@ -7,10 +7,14 @@
 //
 
 import SwiftUI
-
 struct ContentView : View {
+    
+    init() {
+        mainStore.dispatch(MainStateAction.showUserList)
+    }
+    
     var body: some View {
-        Text("Hello World")
+        UserList(userList: mainStore.state.userList)
     }
 }
 
